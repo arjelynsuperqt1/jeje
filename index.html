@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jed Nicholas G. Bernados - Resume</title>
+    <style>
+        /* Color Palette */
+        :root {
+            --primary-color: #2c3e50; /* Dark Gray/Blue */
+            --secondary-color: #2980b9; /* Bright Blue */
+            --accent-color: #e67e22; /* Orange */
+            --highlight-color: #16a085; /* Teal */
+            --background-color: #1f2a33; /* Dark Background */
+            --card-background-color: #34495e; /* Darker Card Background */
+            --text-color: #ecf0f1; /* Light Text */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 30px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Profile Section */
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            margin-right: 20px;
+            width: 100px;
+            height: 100px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+        /* About Me Section (Ano) */
+        .about-me {
+            background-color: var(--card-background-color);
+            padding: 30px;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .about-me h2 {
+            color: var(--highlight-color);
+            font-size: 32px;
+        }
+
+        .about-me p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .about-me .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Section Box */
+        .section-box {
+            background-color: var(--card-background-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-box h2 {
+            color: var(--highlight-color);
+            font-size: 32px;
+        }
+
+        .section-box h3 {
+            color: var(--accent-color);
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        /* Navigation Bar */
+        .navigation ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navigation ul li {
+            margin: 0 15px;
+        }
+
+        .navigation ul li a {
+            font-size: 18px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .navigation ul li a:hover {
+            transform: scale(1.1);
+            color: var(--highlight-color);
+        }
+
+        /* Container for content */
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        /* Skills Bar and Other Sections */
+        .skills-bar {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .skills-bar span {
+            display: block;
+            height: 20px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+        }
+
+        .skills-bar .html { width: 90%; background-color: var(--accent-color); }
+        .skills-bar .css { width: 80%; background-color: var(--secondary-color); }
+        .skills-bar .javascript { width: 70%; background-color: var(--highlight-color); }
+        .skills-bar .python { width: 60%; background-color: #2ecc71; }
+
+        /* Animation for sections */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Jed Nicholas G. Bernados</h1>
+        <p>IT Student | Aspiring Developer</p>
+    </header>
+
+    <!-- Profile Section -->
+    <div class="profile">
+        <img src="https://i.imgur.com/SaAQa4u.jpeg" alt="Profile Picture">
+        <div>
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="mailto:jgbernados1473qc@student.fatima.edu.ph">jgbernados1473qc@student.fatima.edu.ph</a> | <strong>Phone:</strong> 09511867819</p>
+                <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1KNoAinXCa/">Jed Nicholas G. Bernados</a></p>
+                <p><strong>Address:</strong> #43 St. Mary Street, Lagro La Mesa Heights, Q.C.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <ul>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certification">Certification</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#featured">Featured</a></li>
+        </ul>
+    </div>
+    
+       <!-- About Me Section (Ano) -->
+    <div class="about-me">
+        <h2>About me</h2>
+        <p>Hey, I'm <span class="highlight">Jed Nicholas</span>, a first-year IT student who loves diving into tech and developing cool stuff. From basic HTML and CSS to dabbling in Python and JavaScript, I'm always learning and growing.</p>
+        <p>On the side, I'm also a passionate member of my school’s basketball team, and you can find me hanging out with friends or playing games whenever I get the chance. Oh, and I have a weird obsession with <span class="highlight">cats</span>!</p>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <!-- Experience Section -->
+        <div class="section-box" id="experience">
+            <h2>Experience</h2>
+            <h3>Entrepreneur Project</h3>
+            <p>Lagro High School Gr 12 HUMSS</p>
+            <h3>Summary</h3>
+            <p>Selling chicken skin in school for our entrepreneur project.</p>
+            <h3>Additional Experience</h3>
+            <ul>
+                <li>Worked as a freelance web designer for several local businesses.</li>
+                <li>Contributed to a student-run tech blog as a writer and editor.</li>
+                <li>Developed a small online store using WordPress as part of a personal project.</li>
+            </ul>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section-box" id="skills">
+            <h2>Skills</h2>
+            <h3>Technical Skills</h3>
+            <div class="skills-bar"><span class="html">HTML - 90%</span></div>
+            <div class="skills-bar"><span class="css">CSS - 80%</span></div>
+            <div class="skills-bar"><span class="javascript">JavaScript - 70%</span></div>
+            <div class="skills-bar"><span class="python">Python - 60%</span></div>
+            <h3>Additional Skills</h3>
+            <ul>
+                <li>Basic knowledge of graphic design and image editing tools like Photoshop and Canva.</li>
+                <li>Intermediate understanding of database management and SQL.</li>
+                <li>Basic knowledge of UI/UX principles and design systems.</li>
+            </ul>
+        </div>
+
+        <!-- Certification Section -->
+        <div class="section-box" id="certification">
+            <h2>Certification</h2>
+            <p>Graduate High School</p>
+            <h3>Additional Certifications</h3>
+            <ul>
+                <li>Completed online courses in HTML, CSS, and JavaScript from freeCodeCamp.</li>
+                <li>Certified in Google Analytics (Beginner Level).</li>
+                <li>Basic certification in IT Security Fundamentals from Udemy.</li>
+            </ul>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section-box" id="education">
+            <h2>Education</h2>
+            <p>1st-year IT student at Our Lady of Fatima University</p>
+            <h3>Additional Education</h3>
+            <ul>
+                <li>Attended various tech workshops on web development and programming.</li>
+                <li>Completed summer coding bootcamps on web development.</li>
+                <li>Participated in school tech fairs showcasing personal projects.</li>
+            </ul>
+        </div>
+
+        <!-- Featured Section -->
+        <div class="section-box" id="featured">
+            <h2>Featured</h2>
+            <ul>
+                <li>Best Entrepreneur Award - Senior High Project</li>
+                <li>Consistent Honor Student - Lagro High School</li>
+                <li>Basketball Club Member - Lagro High</li>
+                <li>Champion of the School's Web Development Challenge.</li>
+                <li>Featured in "Student Developers Monthly" for a personal website project.</li>
+                <li>Runner-up in the Lagro Science Fair with a tech-related project.</li>
+                <li>Winner of the school's coding competition last year.</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
