@@ -1,1 +1,134 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Arjelyn</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to top right, #ffc1cc, #ffe6eb);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+    .container {
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .heart {
+      font-size: 100px;
+      color: red;
+      cursor: pointer;
+      animation: pulse 1.2s infinite;
+    }
+
+    .content {
+      margin-top: 20px;
+      font-size: 1.8em;
+      color: #ff0055;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.5s ease;
+    }
+
+    .content img {
+      max-width: 300px;
+      border-radius: 15px;
+      margin-top: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .floating-hearts span {
+      position: absolute;
+      color: red;
+      font-size: 30px;
+      animation: float 6s infinite;
+      opacity: 0.6;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-hearts" id="hearts"></div>
+
+  <div class="container">
+    <div class="heart" onclick="nextContent()">♥</div>
+    <div id="contentBox" class="content"></div>
+  </div>
+
+  <script>
+    const contentList = [
+      'I love you Arjelyn!',
+      '<img src="https://i.imgur.com/OH9b4bB.jpeg" alt="Pic 1">',
+      'Sobrang cute mo!',
+      '<img src="https://i.imgur.com/wXSgg0j.jpeg" alt="Pic 2">',
+      'Ikaw lang sapat na.',
+      '<img src="https://i.imgur.com/BaK0tNA.jpeg" alt="Pic 3">',
+      'Walang iba kundi ikaw lang, Te!',
+      '<img src="https://i.imgur.com/JuVV9kh.jpeg" alt="Pic 4">',
+      'Forever kitang mamahalin.'
+    ];
+
+    let index = 0;
+
+    function nextContent() {
+      const box = document.getElementById('contentBox');
+      box.classList.remove('show');
+      setTimeout(() => {
+        box.innerHTML = contentList[index];
+        box.classList.add('show');
+        index = (index + 1) % contentList.length;
+      }, 300);
+    }
+
+    // Floating hearts effect
+    const heartsContainer = document.getElementById('hearts');
+    setInterval(() => {
+      const heart = document.createElement('span');
+      heart.textContent = '♥';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = (20 + Math.random() * 30) + 'px';
+      heart.style.animationDuration = (4 + Math.random() * 3) + 's';
+      heartsContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 7000);
+    }, 300);
+  </script>
+</body>
+</html>
